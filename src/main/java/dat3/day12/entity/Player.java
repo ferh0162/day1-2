@@ -1,17 +1,15 @@
 package dat3.day12.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "spiller")
 public class Player {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   int id;
-  String name;
 
+  @Column (name = "spiller_navn", nullable = false)
+  String name;
 
   public Player() {
   }
